@@ -17,6 +17,7 @@ import org.junit.Test;
  * 
  * @author Tym the Enchanter <tymtheenchanter@randomcoding.co.uk>
  */
+@SuppressWarnings("synthetic-access")
 public class TypedCollectionUtilitiesTest
 {
 	@Test
@@ -33,6 +34,22 @@ public class TypedCollectionUtilitiesTest
 		assertThat(TypedCollectionUtilities.extractTypedCollection(testCollection, TestSubClass.class), hasSize(4));
 		assertThat(TypedCollectionUtilities.extractTypedCollection(testCollection, TestSubSubClass.class), hasSize(2));
 		assertThat(TypedCollectionUtilities.extractTypedCollection(testCollection, OtherTestClass.class), Matchers.<OtherTestClass> empty());
+		assertThat(TypedCollectionUtilities.extractTypedCollection(testCollection, OtherTestSubClass.class), Matchers.<OtherTestSubClass> empty());
+		assertThat(TypedCollectionUtilities.extractTypedCollection(testCollection, Object.class), hasSize(6));
+	}
+
+	@Test
+	public void testExtractTypedCollectionOfSuperTypes() throws Exception
+	{
+		Collection<TestSubClass> testCollection = new HashSet<TypedCollectionUtilitiesTest.TestSubClass>();
+		testCollection.add(new TestSubClass());
+		testCollection.add(new TestSubClass());
+		testCollection.add(new TestSubClass());
+		testCollection.add(new TestSubSubClass());
+		testCollection.add(new TestSubSubClass());
+
+		assertThat(TypedCollectionUtilities.extractTypedCollection(testCollection, TestClass.class), hasSize(5));
+		assertThat(TypedCollectionUtilities.extractTypedCollection(testCollection, Object.class), hasSize(5));
 	}
 
 	private static class TestClass
