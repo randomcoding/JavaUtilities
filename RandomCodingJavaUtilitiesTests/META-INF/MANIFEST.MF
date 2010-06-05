@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RandomCoding Java Utilities Tests
+Bundle-SymbolicName: uk.co.randomcoding.common.JavaUtilitiesTests
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Tym the Enchanter <tymtheenchanter@randomcoding.co.uk>
+Fragment-Host: uk.co.randomcoding.common.JavaUtilities;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: libs/hamcrest-all-1.2.jar,
+ libs/junit-4.8.1.jar,
+ .
