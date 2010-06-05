@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Random Coding Java Utilities
+Bundle-SymbolicName: uk.co.randomcoding.common.JavaUtilities
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Tym the Enchanter <tymtheenchanter@randomcoding.co.uk>
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
