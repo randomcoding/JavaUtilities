@@ -5,3 +5,13 @@ Bundle-SymbolicName: uk.co.randomcoding.common.JavaUtilities
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Tym the Enchanter <tymtheenchanter@randomcoding.co.uk>
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: lib/guava-r06.jar,
+ .
+Export-Package: com.google.common.annotations,
+ com.google.common.base,
+ com.google.common.collect,
+ com.google.common.io,
+ com.google.common.net,
+ com.google.common.primitives,
+ com.google.common.util.concurrent,
+ uk.co.randomcoding.java.util.collection
